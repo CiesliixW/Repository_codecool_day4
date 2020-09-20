@@ -1,1 +1,0 @@
-Ilosc danych 2Imiona['Wojtek', 'Elo']
