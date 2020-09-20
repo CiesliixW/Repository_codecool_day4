@@ -8,6 +8,16 @@ def get_filename():
         print("You should run this program by calling 333 python parser.py filename")
         return ""
 
+def read_from_file_to_list(filename):
+    output =[]
+    with open(filename, "r") as file_to_read :
+        for line in file_to_read.readlines():
+            row  = line.replace("\n", "").split(" ")
+            output.append(row)
+
+    return output
+
+
 def main(): 
     filename = get_filename()
 
@@ -15,6 +25,8 @@ def main():
         return
 
     print(f"File to parse: {filename}")
+    data_list = read_from_file_to_list(filename)
+    print(data_list)
 
 if __name__ == "__main__":
     main()
